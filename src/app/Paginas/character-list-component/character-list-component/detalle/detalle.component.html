@@ -1,0 +1,17 @@
+<mat-card class="example-card" appearance="outlined">
+  <mat-card-header>
+    <mat-card-title>{{ character?._id || 'Character id' }}</mat-card-title>
+    <mat-card-subtitle>{{ character?.name || 'Name' }}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image *ngIf="character?.photoUrl" [src]="character.photoUrl" alt="{{character?.name}}">
+  <mat-card-content>
+    <p>Gender: {{ character?.gender || 'Gender' }}</p>
+    <p>Hair: {{ character?.hair || 'Hair' }}</p>
+    <p>Skin: {{ character?.skin || 'Skin' }}</p>
+    <p>Love: {{ character?.love || 'Love' }}</p>
+    <p>Profession: {{ character?.profession || 'Profession' }}</p>
+    <p>Allies: {{ character?.allies?.length ? character.allies.join(', ') : 'No Allies' }}</p>
+    <p>Enemies: {{ character?.enemies?.length ? character.enemies.join(', ') : 'No Enemies' }}</p>
+    <p>First: {{ character?.first || 'First' }}</p>
+  </mat-card-content>
+</mat-card>
